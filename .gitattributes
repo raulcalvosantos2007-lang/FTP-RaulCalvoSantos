@@ -1,0 +1,7 @@
+# Mantener saltos de línea LF en todo el proyecto (Linux/Vagrant).
+* text=auto eol=lf
+
+# Los scripts deben conservar LF y ser ejecutables en Linux.
+*.sh text eol=lf
+*.yml text eol=lf
+Vagrantfile text eol=lf
