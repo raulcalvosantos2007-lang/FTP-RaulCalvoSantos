@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 410" width="1120" height="410" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f7d4f"/>
+    </marker>
+    <marker id="flecharoja" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b3261e"/>
+    </marker>
+  </defs>
+
+  <rect width="1120" height="410" fill="#ffffff"/>
+  <text x="560" y="36" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f3a5f">Flujo de publicacion y restricciones del servidor FTP</text>
+  <text x="560" y="58" text-anchor="middle" font-size="13" fill="#555555">FTP explicito sobre TLS, usuarios locales y permisos controlados</text>
+
+  <!-- Fila superior: publicacion de ana -->
+  <rect x="20" y="110" width="150" height="110" rx="10" fill="#eef4fb" stroke="#1f3a5f" stroke-width="2"/>
+  <text x="95" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">ana</text>
+  <text x="95" y="170" text-anchor="middle" font-size="12" fill="#222222">cliente FTP</text>
+  <text x="95" y="192" text-anchor="middle" font-size="12" fill="#555555">contrasena ana</text>
+
+  <rect x="230" y="100" width="200" height="130" rx="10" fill="#eaf7ee" stroke="#2f7d4f" stroke-width="2"/>
+  <text x="330" y="132" text-anchor="middle" font-size="14" font-weight="bold" fill="#2f7d4f">vsftpd</text>
+  <text x="330" y="156" text-anchor="middle" font-size="12" fill="#222222">192.168.57.7:21</text>
+  <text x="330" y="178" text-anchor="middle" font-size="12" fill="#222222">TLS explicito</text>
+  <text x="330" y="200" text-anchor="middle" font-size="12" fill="#222222">certificado ftp.raul.test</text>
+
+  <rect x="490" y="80" width="220" height="170" rx="10" fill="#fff7e6" stroke="#b8860b" stroke-width="2"/>
+  <text x="600" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#8a6500">/var/www/html</text>
+  <text x="600" y="138" text-anchor="middle" font-size="12" fill="#222222">root:webpublish</text>
+  <text x="600" y="160" text-anchor="middle" font-size="12" fill="#222222">modo 2775 (setgid)</text>
+  <text x="600" y="186" text-anchor="middle" font-size="12" fill="#222222">archivos nuevos 0664</text>
+  <text x="600" y="212" text-anchor="middle" font-size="12" fill="#222222">ana escribe, Apache lee</text>
+
+  <rect x="770" y="110" width="160" height="110" rx="10" fill="#eef4fb" stroke="#1f3a5f" stroke-width="2"/>
+  <text x="850" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">Apache 2</text>
+  <text x="850" y="170" text-anchor="middle" font-size="12" fill="#222222">www.raul.test</text>
+  <text x="850" y="192" text-anchor="middle" font-size="12" fill="#555555">puerto 80</text>
+
+  <rect x="980" y="110" width="120" height="110" rx="10" fill="#f5f5f5" stroke="#777777" stroke-width="2"/>
+  <text x="1040" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">Navegador</text>
+  <text x="1040" y="174" text-anchor="middle" font-size="11" fill="#555555">usuario final</text>
+
+  <!-- Fila inferior: juan y anonymous -->
+  <rect x="20" y="285" width="150" height="90" rx="10" fill="#eef4fb" stroke="#1f3a5f" stroke-width="2"/>
+  <text x="95" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">juan</text>
+  <text x="95" y="342" text-anchor="middle" font-size="12" fill="#222222">cliente FTP</text>
+
+  <rect x="230" y="285" width="200" height="90" rx="10" fill="#fdecea" stroke="#b3261e" stroke-width="2"/>
+  <text x="330" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#b3261e">chroot en /home/juan</text>
+  <text x="330" y="342" text-anchor="middle" font-size="12" fill="#222222">no puede salir de su home</text>
+
+  <rect x="490" y="285" width="220" height="90" rx="10" fill="#fdecea" stroke="#b3261e" stroke-width="2"/>
+  <text x="600" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#b3261e">anonymous</text>
+  <text x="600" y="342" text-anchor="middle" font-size="12" fill="#222222">acceso rechazado</text>
+  <line x1="515" y1="300" x2="685" y2="360" stroke="#b3261e" stroke-width="3"/>
+  <line x1="685" y1="300" x2="515" y2="360" stroke="#b3261e" stroke-width="3"/>
+
+  <!-- Flechas -->
+  <line x1="170" y1="165" x2="230" y2="165" stroke="#2f7d4f" stroke-width="2" marker-end="url(#flecha)"/>
+  <text x="200" y="156" text-anchor="middle" font-size="11" fill="#2f7d4f">FTPS</text>
+
+  <line x1="430" y1="165" x2="490" y2="165" stroke="#2f7d4f" stroke-width="2" marker-end="url(#flecha)"/>
+  <text x="460" y="156" text-anchor="middle" font-size="11" fill="#2f7d4f">sube</text>
+
+  <line x1="710" y1="165" x2="770" y2="165" stroke="#2f7d4f" stroke-width="2" marker-end="url(#flecha)"/>
+  <text x="740" y="156" text-anchor="middle" font-size="11" fill="#2f7d4f">lee</text>
+
+  <line x1="930" y1="165" x2="980" y2="165" stroke="#2f7d4f" stroke-width="2" marker-end="url(#flecha)"/>
+  <text x="955" y="156" text-anchor="middle" font-size="11" fill="#2f7d4f">HTTP</text>
+
+  <line x1="170" y1="330" x2="230" y2="330" stroke="#1f3a5f" stroke-width="2" marker-end="url(#flecha)"/>
+  <text x="200" y="321" text-anchor="middle" font-size="11" fill="#1f3a5f">FTPS</text>
+
+  <text x="560" y="398" text-anchor="middle" font-size="12" fill="#666666">ana publica en el document root; juan queda enjaulado; el acceso anonimo se rechaza</text>
+</svg>
